@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://look_blog.gitee.io/blog">
   <title>“javaSE实训笔记” | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#javaSE实训笔记-D3  实验步骤：　　1： 准备结巴分词工具，测试分词效果。 　　2：提取文章的关键词：用结巴分词工具对文章分词，去除停用词，构建词向量空间，用 TF-IDF 计算关键词权重。生成新的 idf字典文件 　　3：计算文章的相似度：采用 Jaccard 相似度系数或余弦相似度计算文章两两相似度。 　　4：选择当前文章最相似的前 10 篇文章推荐给用户。  实现过程 #####1">
+  <meta name="description" content="#javaSE实训笔记-D3基于内容的新闻推荐系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="“javaSE实训笔记”">
 <meta property="og:url" content="http://look_blog.gitee.io/blog/2020/01/15/javaSE%E5%AE%9E%E8%AE%AD/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#javaSE实训笔记-D3  实验步骤：　　1： 准备结巴分词工具，测试分词效果。 　　2：提取文章的关键词：用结巴分词工具对文章分词，去除停用词，构建词向量空间，用 TF-IDF 计算关键词权重。生成新的 idf字典文件 　　3：计算文章的相似度：采用 Jaccard 相似度系数或余弦相似度计算文章两两相似度。 　　4：选择当前文章最相似的前 10 篇文章推荐给用户。  实现过程 #####1">
+<meta property="og:description" content="#javaSE实训笔记-D3基于内容的新闻推荐系统">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-15T05:18:41.000Z">
-<meta property="article:modified_time" content="2020-01-15T12:55:50.551Z">
+<meta property="article:modified_time" content="2020-01-15T13:05:25.667Z">
 <meta property="article:author" content="H2 cloud">
 <meta name="twitter:card" content="summary">
   
@@ -189,7 +189,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#javaSE实训笔记-D3</p>
+        <p>#javaSE实训笔记-D3<br>基于内容的新闻推荐系统</p>
+<a id="more"></a>
 <hr>
 <h2 id="实验步骤："><a href="#实验步骤：" class="headerlink" title="实验步骤："></a>实验步骤：</h2><p>　　1： 准备结巴分词工具，测试分词效果。</p>
 <p>　　2：提取文章的关键词：用结巴分词工具对文章分词，去除停用词，构建词向量空间，用 TF-IDF 计算关键词权重。生成新的 idf字典文件</p>
@@ -208,10 +209,7 @@
 <p>　　　　将所有关键词添加到 Map&lt;String, Integer&gt; freMap = new HashMap&lt;String, Integer&gt;()；（泛型的含义&lt;关键词，关键词出现的次数&gt;）中</p>
 <p>　　　　生成新的 idf 字典</p>
 <p>　　　　// 1. 通过Map.keySet遍历key和value：</p>
-<p>　　　　—java</p>
-<p>　　　　for (String key : freMap.keySet()) {</p>
-<p>   　　　　　　　bw.write(key + “ “ + Math.log(list_size/(idfMap.get(key)+1)) + “\n”);</p>
-<p>　　　　}</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String key : freMap.keySet()) &#123;</span><br><span class="line">   bw.write(key + <span class="string">" "</span> + Math.log(list_size/(idfMap.get(key)+<span class="number">1</span>)) + <span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>　　2.3：计算 tf-idf(word)</p>
 <p>　　　　2.3.1：List<Article> article = dao.getAllList();获取所有的新闻</p>
 <p>　　　　2.3.2：调用结巴分词的 TFIDFAnalyzer 类和上一步算出来的 idf _dict.txt字典, 算出每一篇新闻内容的关键词的 tf-idf(word)</p>
