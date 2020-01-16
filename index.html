@@ -264,7 +264,7 @@ if(true){
   	repo: 'blog_comment',
   	owner: '54look',
   	admin: ['54look'],
-  	id: '',
+  	id: window.location.pathname    // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识,
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
@@ -375,7 +375,7 @@ if(true){
   	repo: 'blog_comment',
   	owner: '54look',
   	admin: ['54look'],
-  	id: '',
+  	id: window.location.pathname    // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识,
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
