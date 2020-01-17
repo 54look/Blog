@@ -25,7 +25,7 @@
   <link rel="alternative" href="/atom.xml" title="氢气云" type="application/atom+xml">
   
   
-  <link rel="icon" href="http://q4572bptf.bkt.clouddn.com/favicon.ico">
+  <link rel="icon" href="http://q4572bptf.bkt.clouddn.com/favicon1.ico">
   
   <link rel="stylesheet" type="text/css" href="/blog/./main.0cf68a.css">
   <style type="text/css">
@@ -43,60 +43,122 @@
       
 <div class="overlay" style="background: url('http://q4572bptf.bkt.clouddn.com/背景.jpg') no-repeat center bottom;background-size: cover;"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="http://q4572bptf.bkt.clouddn.com/avatar.png" class="js-avatar">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/">H2 Cloud</a></h1>
-		</hgroup>
-		
-		<p class="header-subtitle">氢气球</p>
-		
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="http://q4572bptf.bkt.clouddn.com/avatar.png" class="js-avatar">
+    </a>
+    <hgroup>
+      <h1 class="header-author" style="font-size: 32px;margin-top: -8px;"><a href="/">
+          H2 Cloud</a></h1>
+    </hgroup>
+    <!--     
+    <p class="header-subtitle">
+      氢气球
+    </p>
+     -->
+    <!-- 副标题 and 字体滚动 -->
+    
+    <p class="header-subtitle" style="margin-top: -15px;">
+      氢气球
+      <!-- 滚动字体 -->
+      <div id="binft"></div>
+      <script>
+      var binft = function(r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/blog/">主页</a></li>
-	        
-				<li><a href="/blog/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
-	        
-				<li><a href="/blog/categories">分类</a></li>
-	        
-				<li><a href="/blog/archives/index.html">归档</a></li>
-	        
-			</ul>
-		</nav>
-		
-		<nav>
-    		总文章数 3
-		</nav>
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
 
-		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+          o = ["旧长诗 短歌曲", "呓语中 提纸笔", "说忘记 空欢喜", "稀碎后 落下的雨滴", "短摘文 藏心底", "旧往昔 你可都记起", "不归人 无归期", "久别后 愿不再相遇", "梦中人 青草地", "白炽灯 冰冷的你", "旧夏季 听风起", "无字书 泛细语", "难相拥 只寻觅", "亡心人 言笑意", "樱花巷 落满地", "不及你 指尖疏离", "旧长诗 短歌曲", "且堆积 难撩理", "腹心疾 风乍起", "离别后 散落的泪滴", "柳叶长 细似羽", "你来过 枯萎了夏季", "不觉想 涸辙里", "失林鸟 可曾有枝依", "北荒芜 南故地", "人影稀 而星如雨", "风吹过 却肆意", "不再问 情何以", "陌路人 旧琴笛", "回忆里 留期许", "写长信 难寄去", "故事里 还愿甜蜜", "旧长诗 短歌曲", "呓语中 提纸笔", "说忘记 空欢喜", "就这样柔软且沉溺"].map(function(r) {
+            return r + ""
+          }),
+          a = 2,
+          g = 1,
+          s = 5,
+          d = 75,
+          b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+          c = {
+            text: "",
+            prefixP: -s,
+            skillI: 0,
+            skillP: 0,
+            direction: "forward",
+            delay: a,
+            step: g
+          };
+        i()
+      };
+      binft(document.getElementById('binft'));
+
+      </script>
+      <!-- 滚动字体结束 -->
+    </p>
+    
+    <!-- 副标题 and 字体滚动 结束 -->
+    <!-- 左侧导航栏 -->
+    <nav class="header-menu">
+      <ul>
+        
+        <li><a href="/blog/">
+            主页</a></li>
+        
+        <li><a href="/blog/tags/%E9%9A%8F%E7%AC%94/">
+            随笔</a></li>
+        
+        <li><a href="/blog/categories">
+            分类</a></li>
+        
+        <li><a href="/blog/archives/index.html">
+            归档</a></li>
+        
+      </ul>
+    </nav>
+    <!-- 左侧导航栏结束 -->
+    <nav>
+      总文章数
+      8
+    </nav>
+    <nav class="header-smart-menu">
+      
+      
+      <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">
+        所有文章</a>
+      
+      
+      
+      <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">
+        关于我</a>
+      
+      
+    </nav>
+    <nav class="header-nav">
+      <div class="social">
+        
+        <a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
+        
+        <a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+        
+        <a class="github" target="_blank" href="https://github.com/54look?tab=repositories" title="github"><i class="icon-github"></i></a>
+        
+      </div>
+    </nav>
+  </header>
 </div>
 
     </div>
@@ -133,13 +195,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://github.com/54look?tab=repositories" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -192,7 +252,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数: </span>
-        <span class="post-count">1.1k字</span>
+        <span class="post-count">6字</span>
       </span>
     </span>
 
@@ -201,7 +261,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 
@@ -211,12 +271,13 @@
       
     </header>
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
+    </script>
     <div class="article-entry" itemprop="articleBody">
       
-      <p>基于内容的新闻推荐系统</p>
+      Here's something encrypted, password is required to continue reading.
       
       
       
@@ -249,6 +310,331 @@
       
       <p class="article-more-link">
         <a class="article-more-a" href="/blog/archives/c56e6275.html">
+          展开全文 >></a>
+      </p>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-boke - 副本 (6)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/archives/48314b32.html">boke - 副本 (6)</a>
+    </h1>
+  
+
+      
+      <a href="/blog/archives/48314b32.html" class="archive-article-date">
+  	<time datetime="2020-01-17T16:43:25.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+      
+      
+    </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容 -->
+    </script>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/blog/archives/48314b32.html">
+          展开全文 >></a>
+      </p>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-boke - 副本 (5)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/archives/48314b32.html">boke - 副本 (5)</a>
+    </h1>
+  
+
+      
+      <a href="/blog/archives/48314b32.html" class="archive-article-date">
+  	<time datetime="2020-01-17T16:43:25.330Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+      
+      
+    </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容 -->
+    </script>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/blog/archives/48314b32.html">
+          展开全文 >></a>
+      </p>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-boke - 副本 (4)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/archives/48314b32.html">boke - 副本 (4)</a>
+    </h1>
+  
+
+      
+      <a href="/blog/archives/48314b32.html" class="archive-article-date">
+  	<time datetime="2020-01-17T16:43:25.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+      
+      
+    </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容 -->
+    </script>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/blog/archives/48314b32.html">
+          展开全文 >></a>
+      </p>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-boke - 副本 (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/archives/48314b32.html">boke - 副本 (3)</a>
+    </h1>
+  
+
+      
+      <a href="/blog/archives/48314b32.html" class="archive-article-date">
+  	<time datetime="2020-01-17T16:43:24.369Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+      
+      
+    </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容 -->
+    </script>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/blog/archives/48314b32.html">
+          展开全文 >></a>
+      </p>
+      
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-boke - 副本 (2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/archives/48314b32.html">boke - 副本 (2)</a>
+    </h1>
+  
+
+      
+      <a href="/blog/archives/48314b32.html" class="archive-article-date">
+  	<time datetime="2020-01-17T16:43:23.806Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+      
+      
+    </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容 -->
+    </script>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <p class="article-more-link">
+        <a class="article-more-a" href="/blog/archives/48314b32.html">
           展开全文 >></a>
       </p>
       
@@ -317,9 +703,10 @@
       
     </header>
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
+    </script>
     <div class="article-entry" itemprop="articleBody">
       
       <p>#人生的意义是什么？</p>
@@ -377,7 +764,7 @@
 
       
       <a href="/blog/archives/d043b79f.html" class="archive-article-date">
-  	<time datetime="2020-01-15T05:18:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
+  	<time datetime="2019-06-15T05:18:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-15</time>
 </a>
       
       <div style="margin-top:10px;">
@@ -404,9 +791,10 @@
       
     </header>
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
     
-    <!-- 相册 and 视频目录内容 -->
+    <!-- 目录内容 -->
+    </script>
     <div class="article-entry" itemprop="articleBody">
       
       <p>#人生列车</p>
@@ -421,6 +809,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -589,6 +988,10 @@ var _hmt = _hmt || [];
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -638,7 +1041,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你好呀~&lt;br&gt;&lt;br&gt;我是站长氢气球&lt;br&gt;会继续完善内容的&lt;br&gt;未来可期、可待&lt;br&gt;谢谢你的足迹</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">你好呀~&lt;br&gt;&lt;br&gt;我是站长氢气球&lt;br&gt;一个转行当程序猿的漫画师&lt;br&gt;承认无知、探求新知、获得力量&lt;br&gt;未来可期、可待&lt;br&gt;&lt;br&gt;谢谢你的足迹~</div>
   	  	
     	</section>
     
@@ -714,3 +1117,9 @@ var _hmt = _hmt || [];
   </div>
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
+
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
