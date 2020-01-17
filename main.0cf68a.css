@@ -1,54 +1,3 @@
-category-all-page {
-  margin: 30px 40px 30px 40px;
-  position: relative;
-  min-height: 70vh;
-}
-.category-all-page h2 {
-  margin: 20px 0;
-}
-.category-all-page .category-all-title {
-  text-align: center;
-}
-.category-all-page .category-all {
-  margin-top: 20px;
-}
-.category-all-page .category-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.category-all-page .category-list-item-list-item {
-  margin: 10px 15px;
-}
-.category-all-page .category-list-item-list-count {
-  color: $grey;
-}
-.category-all-page .category-list-item-list-count:before {
-  display: inline;
-  content: " (";
-}
-.category-all-page .category-list-item-list-count:after {
-  display: inline;
-  content: ") ";
-}
-.category-all-page .category-list-item {
-  margin: 10px 10px;
-}
-.category-all-page .category-list-count {
-  color: $grey;
-}
-.category-all-page .category-list-count:before {
-  display: inline;
-  content: " (";
-}
-.category-all-page .category-list-count:after {
-  display: inline;
-  content: ") ";
-}
-.category-all-page .category-list-child {
-  padding-left: 10px;
-}
-
 .clearfix:after,
 .clearfix:before {
   content: "";
@@ -900,24 +849,16 @@ html {
 }*/
 /*头像旋转*/
 .left-col #header .profilepic img {
-  border-radius: 300px;
-  opacity: 1;
-  -webkit-transition: 2s all;
-  ease-in
+  /* 控制旋转速度时间*/
+  -webkit-transition: -webkit-transform 1.0s ease-out;
+  -moz-transition: -moz-transform 1.0s ease-out;
+  transition: transform 1.0s ease-out;
 }
 .left-col #header .profilepic img:hover {
-  transform: rotate(360deg);
-  #旋转角度
-}
-.left-col #header .profilepic img.show {
-  width: 100%;
-  height: 100%;
-  opacity: 1
-}
-.left-col #header .profilepic img.show {
-  width: 100%;
-  height: 100%;
-  opacity: 1
+  /* 鼠标经过360% */
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
 }
 /*头像旋转结束*/
 .left-col #header .header-author {
