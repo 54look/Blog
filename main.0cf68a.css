@@ -893,16 +893,33 @@ html {
   -webkit-box-align: center;
   text-align: center
 }
-.left-col #header .profilepic img {
+/*.left-col #header .profilepic img {
   border-radius: 300px;
   opacity: 1;
   -webkit-transition: all .2s ease-in
+}*/
+/*头像旋转*/
+.left-col #header .profilepic img {
+  border-radius: 300px;
+  opacity: 1;
+  -webkit-transition: 2s all;
+  ease-in
+}
+.left-col #header .profilepic img:hover {
+  transform: rotate(360deg);
+  #旋转角度
 }
 .left-col #header .profilepic img.show {
   width: 100%;
   height: 100%;
   opacity: 1
 }
+.left-col #header .profilepic img.show {
+  width: 100%;
+  height: 100%;
+  opacity: 1
+}
+/*头像旋转结束*/
 .left-col #header .header-author {
   text-align: center;
   margin: .67em 0;
