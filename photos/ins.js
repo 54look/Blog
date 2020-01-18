@@ -110,19 +110,19 @@
                 addMask($videoImg[i]);
             }
         };
+        // render函数功能：  按照 data.json 文件创建相册集
         var render = function render(res) {
             var ulTmpl = "";
             for (var j = 0, len2 = res.list.length; j < len2; j++) {
                 var data = res.list[j].arr;
                 var liTmpl = "";
                 for (var i = 0, len = data.link.length; i < len; i++) {
+                    //储存图片的地址
                     var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/photos/' + data.link[i];
-                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/blog/master/photos/' + data.link[i];
-                    // https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2019-8-24_%E7%94%A8%E4%BA%8E%E7%9B%B8%E5%86%8C%E6%B5%8B%E8%AF%95.jpg
+                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/photos/' + data.link[i];
                     var type = data.type[i];
                     var target = src + (type === 'video' ? '.mp4' : '.jpg');
                     src += '';
-
                     liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
                 <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
                   <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
