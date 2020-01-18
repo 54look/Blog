@@ -116,8 +116,8 @@
                 var data = res.list[j].arr;
                 var liTmpl = "";
                 for (var i = 0, len = data.link.length; i < len; i++) {
-                    var minSrc = 'https://raw.githubusercontent.com/ChemLez/blog-Picture/master/min_photos/' + data.link[i];
-                    var src = ' https://raw.githubusercontent.com/ChemLez/blog-Picture/master/min_photos/' + data.link[i];
+                    var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/photos/' + data.link[i];
+                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/blog/master/photos/' + data.link[i];
                     // https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2019-8-24_%E7%94%A8%E4%BA%8E%E7%9B%B8%E5%86%8C%E6%B5%8B%E8%AF%95.jpg
                     var type = data.type[i];
                     var target = src + (type === 'video' ? '.mp4' : '.jpg');
@@ -125,7 +125,7 @@
 
                     liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
                 <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
-                  <img class="reward-img" data-type="' + type + '" data-src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+                  <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
