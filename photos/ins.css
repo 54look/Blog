@@ -26,6 +26,7 @@
 }
 .instagram .thumb {
     width: 25%;
+    /*每页显示4个图片*/
     height: 0;
     padding-bottom: 25%;
     position: relative;

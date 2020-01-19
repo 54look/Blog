@@ -110,26 +110,45 @@
                 addMask($videoImg[i]);
             }
         };
+
         // render函数功能：  按照 data.json 文件创建相册集
         var render = function render(res) {
             var ulTmpl = "";
             for (var j = 0, len2 = res.list.length; j < len2; j++) {
                 var data = res.list[j].arr;
                 var liTmpl = "";
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                var data_size = [];
+                var pic_h;
+                var pic_w;
+                data_size[0] = "1080×1080";
+                for (var i = 0, len = data.link.length; i < len; i++) {
+                    // var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
+                    // pic_h = src.split("/")[6].split("_")[0];
+                    // pic_w = src.split("/")[6].split("_")[1];
+                    data_size[i] = (pic_h * 2) + '×' + (pic_w * 2);
+                    data_size[i] = "1080×1080";
+                }
                 for (var i = 0, len = data.link.length; i < len; i++) {
                     //储存图片的地址
-                    var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/photos/' + data.link[i];
-                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/photos/' + data.link[i];
+                    var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
+                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
                     var type = data.type[i];
                     var target = src + (type === 'video' ? '.mp4' : '.jpg');
+                    // pic_h = src.split("/")[6].split("_")[0];
+                    // pic_w = src.split("/")[6].split("_")[1];
+                    // data_size = (pic_h * 2) + '×' + (pic_w * 2);
+                    // data_size = "1920x2440";
                     src += '';
                     liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
+                <a href="' + src + '" itemprop="contentUrl" data-size="' + data_size[i] + '" data-type="' + type + '" data-target="' + src + '">\
                   <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
+
                 }
+                ////////////////////////////////////////////////////////////////////////////////////////
                 ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
@@ -137,11 +156,6 @@
             document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
             createVideoIncon();
             _view2.default.init();
-        };
-
-        var replacer = function replacer(str) {
-            var arr = str.split("/");
-            return "/assets/ins/" + arr[arr.length - 1];
         };
 
         var ctrler = function ctrler(data) {
@@ -562,7 +576,7 @@
                 gallery.listen('afterChange', changeHandle);
                 gallery.listen('initialZoomOut', stopVideoHandle);
             };
-
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // loop through all gallery elements and bind events
             var galleryElements = document.querySelectorAll(gallerySelector);
             for (var i = 0, l = galleryElements.length; i < l; i++) {
