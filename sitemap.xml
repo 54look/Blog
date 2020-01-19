@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://look_blog.gitee.io/blog/photos/data.json</loc>
-    
-    <lastmod>2020-01-19T11:02:55.668Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://look_blog.gitee.io/blog/photos/index.html</loc>
     
-    <lastmod>2020-01-19T06:44:59.425Z</lastmod>
+    <lastmod>2020-01-19T17:28:46.375Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://look_blog.gitee.io/blog/photos/videos.html</loc>
     
-    <lastmod>2020-01-18T09:34:03.865Z</lastmod>
+    <lastmod>2020-01-19T15:55:00.488Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://look_blog.gitee.io/blog/photos/data.json</loc>
+    
+    <lastmod>2020-01-19T11:02:55.668Z</lastmod>
     
   </url>
   

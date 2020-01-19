@@ -14,15 +14,15 @@
     氢气云
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="漫画狮     绘画教程     海迷说       图片正在加载中…   (function() {     var loadScript &#x3D; function(path) {         var $script &#x3D; document.createElement(&#39;script&#39;)         document.getElementsByTagName(&#39;body&#39;)[0].">
+  <meta name="description" content="function click_btn(id) {     &#x2F;&#x2F; alert(id);     var clickBtn &#x3D; document.getElementsByClassName(&quot;clickBtn&quot;);     var album &#x3D; document.getElementsByClassName(&quot;album&quot;);     for (var i &#x3D; 0; i &lt; clickBtn">
 <meta property="og:type" content="website">
 <meta property="og:title" content="大师工坊">
 <meta property="og:url" content="http://look_blog.gitee.io/blog/photos/index.html">
 <meta property="og:site_name" content="氢气云">
-<meta property="og:description" content="漫画狮     绘画教程     海迷说       图片正在加载中…   (function() {     var loadScript &#x3D; function(path) {         var $script &#x3D; document.createElement(&#39;script&#39;)         document.getElementsByTagName(&#39;body&#39;)[0].">
+<meta property="og:description" content="function click_btn(id) {     &#x2F;&#x2F; alert(id);     var clickBtn &#x3D; document.getElementsByClassName(&quot;clickBtn&quot;);     var album &#x3D; document.getElementsByClassName(&quot;album&quot;);     for (var i &#x3D; 0; i &lt; clickBtn">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-19T06:44:59.441Z">
-<meta property="article:modified_time" content="2020-01-19T06:44:59.425Z">
+<meta property="article:published_time" content="2020-01-19T17:28:46.382Z">
+<meta property="article:modified_time" content="2020-01-19T17:28:46.375Z">
 <meta property="article:author" content="H2 Cloud">
 <meta name="twitter:card" content="summary">
   
@@ -261,11 +261,37 @@
     <div class="article-entry" itemprop="articleBody">
       
       <link rel="stylesheet" href="./ins.css">
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript">
+function click_btn(id) {
+    // alert(id);
+    var clickBtn = document.getElementsByClassName("clickBtn");
+    var album = document.getElementsByClassName("album");
+    for (var i = 0; i < clickBtn.length; i++) {
+        if (id - 1 == i) {
+            clickBtn[i].classList.remove("btn-default");
+            clickBtn[i].classList.add("btn-info");
+            album[i].style.display = "block";
+        } else {
+            clickBtn[i].classList.remove("btn-info");
+            clickBtn[i].classList.add("btn-default");
+            album[i].style.display = "none";
+        }
+    }
+}
+</script>
 <div class="photos-btn-wrap">
     <a class="photos-btn active" href="index.html">漫画狮</a>
     <a class="photos-btn" href="videos.html">绘画教程</a>
     <a class="photos-btn" href="videos.html">海迷说</a>
 </div>
+<div class="btn-group" role="group" aria-label="web">
+    <a type="button" class="btn btn-info clickBtn" onclick="click_btn(1)">大漫先锋</a>
+    <a type="button" class="btn btn-default clickBtn" onclick="click_btn(2)">彩绘</a>
+    <a type="button" class="btn btn-default clickBtn" onclick="click_btn(3)">随笔</a>
+    <a type="button" class="btn btn-default clickBtn" onclick="click_btn(4)">小漫先锋</a>
+</div>
+<br><br><br>
 <div class="instagram itemscope">
     <a href="https://github.com/54look/blog-Picture.git" target="_blank" class="open-ins">图片正在加载中…</a>
 </div>
