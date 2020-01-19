@@ -140,19 +140,18 @@
             </figure>';
 
                 }
-                liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href="http://q4572bptf.bkt.clouddn.com/2014.jpg" itemprop="contentUrl" data-size="2400x3200" data-type="image" data-target="">\
-                  <img class="reward-img" data-type="image" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-214235.jpg" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+                liTmpl += '<figure class="thumb">\
+                <a href="http://q4572bptf.bkt.clouddn.com/2014.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-214235.jpg" onload="lzld(this)">\
                 </a>\
-                <figcaption style="display:none" itemprop="caption description">没有</figcaption>\
+                <figcaption style="display:none">没有</figcaption>\
             </figure>';
-                liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href= "http://q4572bptf.bkt.clouddn.com/psb (8).jpg"  itemprop="contentUrl" data-size="2160x1620" data-type="image" data-target="">\
-                  <img class="reward-img" data-type="image" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-dfas.jpg" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+                liTmpl += '<figure class="thumb">\
+                <a href= "http://q4572bptf.bkt.clouddn.com/psb (8).jpg" data-size="2160x1620">\
+                  <img class="reward-img" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-dfas.jpg" onload="lzld(this)">\
                 </a>\
-                <figcaption style="display:none" itemprop="caption description">没有</figcaption>\
+                <figcaption style="display:none">没有</figcaption>\
             </figure>';
-
                 ////////////////////////////////////////////////////////////////////////////////////////
                 ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
