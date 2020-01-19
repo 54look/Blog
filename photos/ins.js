@@ -117,11 +117,72 @@
             var liTmpl = "";
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4572bptf.bkt.clouddn.com/2014.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4572bptf.bkt.clouddn.com/2014.jpg" onload="lzld(this)">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-小熊载着企鹅.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-小熊载着企鹅.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">小熊载着企鹅</figcaption>\
             </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-彩绘1.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-彩绘1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-彩绘1针管笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-彩绘1针管笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1针管笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/4608-3456-彩绘1铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-彩绘1铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1铅笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/1728-2304-彩绘2.jpg" data-size="2160x1620">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-彩绘2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-彩绘3.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-彩绘3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-杂货店.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-杂货店.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-杂货店针管笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-杂货店针管笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店针管笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-杂货店铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-杂货店铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店铅笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-金木研.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-金木研.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4cz9gm4f.bkt.clouddn.com/4608-3456-金木研铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-金木研铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研铅笔线稿</figcaption>\
+            </figure>';
+
             ////////////////////////////////////////////////////////////////////////////////////////
             ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">2020年<em>01月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
