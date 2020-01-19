@@ -118,36 +118,41 @@
                 var data = res.list[j].arr;
                 var liTmpl = "";
                 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                var data_size = [];
-                var pic_h;
-                var pic_w;
-                data_size[0] = "1080×1080";
-                for (var i = 0, len = data.link.length; i < len; i++) {
-                    // var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
-                    // pic_h = src.split("/")[6].split("_")[0];
-                    // pic_w = src.split("/")[6].split("_")[1];
-                    data_size[i] = (pic_h * 2) + '×' + (pic_w * 2);
-                    data_size[i] = "1080×1080";
-                }
+                var data_sizess = "1080x1080";
                 for (var i = 0, len = data.link.length; i < len; i++) {
                     //储存图片的地址
                     var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
                     var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
                     var type = data.type[i];
                     var target = src + (type === 'video' ? '.mp4' : '.jpg');
-                    // pic_h = src.split("/")[6].split("_")[0];
-                    // pic_w = src.split("/")[6].split("_")[1];
-                    // data_size = (pic_h * 2) + '×' + (pic_w * 2);
-                    // data_size = "1920x2440";
                     src += '';
+                    var pic_height = src.split("/")[6].split("-")[1];
+                    var pic_width = src.split("/")[6].split("-")[2].split("_")[0];
+                    // alert(pic_width + " " + pic_height);
+                    data_sizess = "1080x4080";
+                    // data_sizess = pic_height + "×" + pic_width;
+
                     liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="' + data_size[i] + '" data-type="' + type + '" data-target="' + src + '">\
+                <a href="' + src + '" itemprop="contentUrl" data-size="' + data_sizess + '" data-type="' + type + '" data-target="' + src + '">\
                   <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
 
                 }
+                liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
+                <a href="http://q4572bptf.bkt.clouddn.com/2014.jpg" itemprop="contentUrl" data-size="2400x3200" data-type="image" data-target="">\
+                  <img class="reward-img" data-type="image" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-214235.jpg" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none" itemprop="caption description">没有</figcaption>\
+            </figure>';
+                liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
+                <a href= "http://q4572bptf.bkt.clouddn.com/psb (8).jpg"  itemprop="contentUrl" data-size="2160x1620" data-type="image" data-target="">\
+                  <img class="reward-img" data-type="image" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-dfas.jpg" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none" itemprop="caption description">没有</figcaption>\
+            </figure>';
+
                 ////////////////////////////////////////////////////////////////////////////////////////
                 ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
@@ -576,7 +581,7 @@
                 gallery.listen('afterChange', changeHandle);
                 gallery.listen('initialZoomOut', stopVideoHandle);
             };
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             // loop through all gallery elements and bind events
             var galleryElements = document.querySelectorAll(gallerySelector);
             for (var i = 0, l = galleryElements.length; i < l; i++) {
