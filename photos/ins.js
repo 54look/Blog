@@ -114,49 +114,80 @@
         // render函数功能：  按照 data.json 文件创建相册集
         var render = function render(res) {
             var ulTmpl = "";
-            for (var j = 0, len2 = res.list.length; j < len2; j++) {
-                var data = res.list[j].arr;
-                var liTmpl = "";
-                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                var data_sizess = "1080x1080";
-                for (var i = 0, len = data.link.length; i < len; i++) {
-                    //储存图片的地址
-                    var minSrc = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
-                    var src = 'https://raw.githubusercontent.com/54look/blog-Picture/master/' + data.link[i];
-                    var type = data.type[i];
-                    var target = src + (type === 'video' ? '.mp4' : '.jpg');
-                    src += '';
-                    var pic_height = src.split("/")[6].split("-")[1];
-                    var pic_width = src.split("/")[6].split("-")[2].split("_")[0];
-                    // alert(pic_width + " " + pic_height);
-                    data_sizess = "1080x4080";
-                    // data_sizess = pic_height + "×" + pic_width;
-
-                    liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="' + data_sizess + '" data-type="' + type + '" data-target="' + src + '">\
-                  <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+            var liTmpl = "";
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-小熊载着企鹅.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-小熊载着企鹅.jpg" onload="lzld(this)">\
                 </a>\
-                <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
+                <figcaption style="display:none">小熊载着企鹅</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-彩绘1.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-彩绘1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-彩绘1针管笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-彩绘1针管笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1针管笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/4608-3456-彩绘1铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/4608-3456-彩绘1铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1铅笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/1728-2304-彩绘2.jpg" data-size="2160x1620">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/1728-2304-彩绘2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-彩绘3.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-彩绘3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-杂货店.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-杂货店.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-杂货店针管笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-杂货店针管笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店针管笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-杂货店铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-杂货店铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货店铅笔线稿</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/2304-1728-金木研.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/2304-1728-金木研.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="https://h2h.coding.net/p/blog_big_pic/d/blog_big_pic/git/raw/master/big_pic/4608-3456-金木研铅笔线稿.jpg" data-size="2400x3200">\
+                  <img class="reward-img" src="https://h2h.coding.net/p/blog_min_pic/d/blog_min_pic/git/raw/master/min_pic/4608-3456-金木研铅笔线稿.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研铅笔线稿</figcaption>\
             </figure>';
 
-                }
-                liTmpl += '<figure class="thumb">\
-                <a href="http://q4572bptf.bkt.clouddn.com/2014.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-214235.jpg" onload="lzld(this)">\
-                </a>\
-                <figcaption style="display:none">没有</figcaption>\
-            </figure>';
-                liTmpl += '<figure class="thumb">\
-                <a href= "http://q4572bptf.bkt.clouddn.com/psb (8).jpg" data-size="2160x1620">\
-                  <img class="reward-img" src="https://raw.githubusercontent.com/54look/blog-Picture/master/photos/2304-1728-dfas.jpg" onload="lzld(this)">\
-                </a>\
-                <figcaption style="display:none">没有</figcaption>\
-            </figure>';
-                ////////////////////////////////////////////////////////////////////////////////////////
-                ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
+
+            ////////////////////////////////////////////////////////////////////////////////////////
+            ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">2020年<em>01月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
-            }
             document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
             createVideoIncon();
             _view2.default.init();
