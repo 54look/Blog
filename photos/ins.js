@@ -110,75 +110,916 @@
                 addMask($videoImg[i]);
             }
         };
-
-        // render函数功能：  按照 data.json 文件创建相册集
         var render = function render(res) {
-
             var ulTmpl = "";
             var liTmpl = "";
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-加洛特.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-加洛特.jpg" onload="lzld(this)">\
+
+            /////////////   大漫先锋    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            ////////////////  2019-7  ////////////////////////////\
+            liTmpl += '<figure class="thumb ">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-加洛特.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-加洛特.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">加洛特</figcaption>\
             </figure>';
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/2444-1728-德雷克.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2444-1728-德雷克.jpg" onload="lzld(this)">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2444-德雷克.jpg" data-size="2590x4600">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2444-德雷克.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">德雷克</figcaption>\
             </figure>';
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/1728-2304-武士河松.jpg" data-size="2160x1620">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-武士河松.jpg" onload="lzld(this)">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2304-1728-武士河松.jpg" data-size="4608x4356">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-武士河松.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">武士河松</figcaption>\
             </figure>';
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-火拳路飞.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-火拳路飞.jpg" onload="lzld(this)">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-火拳路飞.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-火拳路飞.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">火拳路飞</figcaption>\
             </figure>';
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-索隆and酒壶.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-索隆and酒壶.jpg" onload="lzld(this)">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-索隆and酒壶.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-索隆and酒壶.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">索隆and酒壶</figcaption>\
             </figure>';
             liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/2304-1728-路飞1.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-路飞1.jpg" onload="lzld(this)">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-路飞1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-路飞1.jpg" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none">路飞1</figcaption>\
             </figure>';
-            liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/1728-1902-路飞and艾斯1.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-1902-路飞and艾斯1.jpg" onload="lzld(this)">\
-                </a>\
-                <figcaption style="display:none">路飞and艾斯1</figcaption>\
-            </figure>';
-            liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/3456-3456-路飞and艾斯2.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-3456-路飞and艾斯2.jpg" onload="lzld(this)">\
-                </a>\
-                <figcaption style="display:none">路飞and艾斯2</figcaption>\
-            </figure>';
-            liTmpl += '<figure class="thumb">\
-                <a href="http://q4cz9gm4f.bkt.clouddn.com/3456-3456-路飞and艾斯3.jpg" data-size="2400x3200">\
-                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-3456-路飞and艾斯3.jpg" onload="lzld(this)">\
-                </a>\
-                <figcaption style="display:none">路飞and艾斯3</figcaption>\
-            </figure>';
-
-            ////////////////////////////////////////////////////////////////////////////////////////
-            ulTmpl = ulTmpl + '<section class="archives album" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2019年<em>07月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
+            ////////////////////  2019-7  ////////////////////////////////////
+
+            ///////////////////  2018-9  /////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-僵尸派对.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-僵尸派对.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">僵尸派对</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3252-草帽海贼团.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3252-草帽海贼团.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">草帽海贼团</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1707-1280-草帽骑士团.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1707-1280-草帽骑士团.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">草帽骑士团</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ///////////////////   2018-9   ////////////////////////////////////
+
+            ////////////////////  2018-6   //////////////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-2档.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-2档.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">2档</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-4档.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-4档.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">4档</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-四档1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-四档1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-四档2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-四档2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3200-2400-四档3.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3200-2400-四档3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-四档4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-四档4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-四档5.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-四档5.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档5</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3951-3458-四档坦克人.jpg" data-size="1780x1580">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3951-3458-四档坦克人.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档坦克人</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-四档大蛇人1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-四档大蛇人1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档大蛇人1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2448-3265-四档大蛇人2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2448-3265-四档大蛇人2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">四档大蛇人2</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ///////////////////  2018-6   /////////////////////////////////////
+
+            ///////////////////   2017    ///////////////////////////////////
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-1620-奶牛妹1.jpg" data-size="1080x1080">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-1620-奶牛妹1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">奶牛妹1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-奶牛妹2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-奶牛妹2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">奶牛妹2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-快跑鸭..jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-快跑鸭..jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">快跑鸭.</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-沙漠速派龟.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-沙漠速派龟.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">沙漠速派龟</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-王者路飞.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-王者路飞.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">王者路飞</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-罗1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-罗1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">罗1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-骑着甲虫的路飞.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-骑着甲虫的路飞.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">骑着甲虫的路飞</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-龙.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-龙.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">龙</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ///////////////////   2017   //////////////////////////////////
+
+            ///////////////////// 2016-8   /////////////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-Big Man海贼船.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-Big Man海贼船.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">Big Man海贼船</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/960-720-七龙珠.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/960-720-七龙珠.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">七龙珠</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-恐怖三角帆船1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-恐怖三角帆船1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">恐怖三角帆船1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-恐怖三角帆船2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-恐怖三角帆船2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">恐怖三角帆船2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/960-720-格林比特1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/960-720-格林比特1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">格林比特1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-格林比特2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-格林比特2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">格林比特2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-海格里斯.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-海格里斯.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">海格里斯</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/718-960-罗2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/718-960-罗2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">罗2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-骑白马的卡文迪许.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-骑白马的卡文迪许.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">骑白马的卡文迪许</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3200-2400-骗人布将军和乔巴侍卫.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3200-2400-骗人布将军和乔巴侍卫.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">骗人布将军和乔巴侍卫</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-龙宫城1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-龙宫城1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">龙宫城1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-龙宫城2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-龙宫城2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">龙宫城2</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ////////////////////// 2016-8   //////////////////////////////////////////
+
+            //////////////////////  2016-7  ////////////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-Q版四档.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-Q版四档.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">Q版四档</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1598-佛朗奇.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1598-佛朗奇.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">佛朗奇</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/720-960-小黄人1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/720-960-小黄人1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小黄人1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-山治王子和白雪罗宾.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-山治王子和白雪罗宾.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">山治王子和白雪罗宾</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1800-1350-悬赏单1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1800-1350-悬赏单1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">悬赏单1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1800-1350-悬赏单2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1800-1350-悬赏单2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">悬赏单2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-播音中的路飞.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-播音中的路飞.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">播音中的路飞</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-汉考克.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-汉考克.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">汉考克</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1511-沙漠中的路飞.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1511-沙漠中的路飞.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">沙漠中的路飞</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1337-1486-牛仔乔巴.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1337-1486-牛仔乔巴.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">牛仔乔巴</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-牧羊中的乔巴.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-牧羊中的乔巴.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">牧羊中的乔巴</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1492-索隆正在捉偷酒的狮子.jpg" data-size="1350x1490">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1492-索隆正在捉偷酒的狮子.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">索隆正在捉偷酒的狮子</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-草帽机械团轰炸小镇.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-草帽机械团轰炸小镇.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">草帽机械团轰炸小镇</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/720-960-路飞2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/720-960-路飞2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">路飞2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1600-遛狗中的布鲁克.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1600-遛狗中的布鲁克.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">遛狗中的布鲁克</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1514-骗人布正在给长颈鹿上色.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1514-骗人布正在给长颈鹿上色.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">骗人布正在给长颈鹿上色</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1345-1490-骗人布滑翔机.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1345-1490-骗人布滑翔机.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">骗人布滑翔机</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1350-1800-鱼人岛房屋.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1350-1800-鱼人岛房屋.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">鱼人岛房屋</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ////////////////////  2016-7  ////////////////////////////////////////////
+
+            ////////////////////// 2016-6  /////////////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-伊迪欧.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-伊迪欧.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">伊迪欧</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-欧隆布斯.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-欧隆布斯.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">欧隆布斯</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/720-960-毕卡.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/720-960-毕卡.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">毕卡</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ////////////////////  2016-7  /////////////////////////////////////////////
+
+            //////////////////////////////////////////////////////\
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-2013.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-2013.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">2013</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2400-3200-2014.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2400-3200-2014.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">2014</figcaption>\
+            </figure>';
+
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2448-3264-2015.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2448-3264-2015.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">2015</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig1" style="display:block;"><h1 class="year">2020年<em>01月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+
+
+            /////////////  彩绘   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////\
+            var liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-北极熊载着南极企鹅.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-北极熊载着南极企鹅.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">北极熊载着南极企鹅</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2212-1658-兔女郎1.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2212-1658-兔女郎1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">兔女郎1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2304-1728-兔女郎2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-兔女郎2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">兔女郎2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2304-1728-兔女郎3.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-兔女郎3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">兔女郎3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-杂货铺1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-杂货铺1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货铺1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-杂货铺2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-杂货铺2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货铺2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-杂货铺3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-杂货铺3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">杂货铺3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-金木研.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-金木研.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-金木研2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-金木研2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-金木研3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-金木研3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-彩绘1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-彩绘1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-彩绘2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-彩绘2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-彩绘3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-彩绘3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2061-彩绘21.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2061-彩绘21.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘21</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-彩绘22.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-彩绘22.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">彩绘22</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1536-2048-雪糕1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1536-2048-雪糕1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">雪糕1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1536-2048-雪糕2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1536-2048-雪糕2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">雪糕2</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig2" style="display:none;"><h1 class="year">2019年<em>07月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+
+            /////////////    随笔    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //////////////////////////////////////////////////////\
+            var liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-4档2.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-4档2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">4档2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-4档3.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-4档3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">4档3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3458-4609-4皇.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3458-4609-4皇.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">4皇</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/720-960-乔巴.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/720-960-乔巴.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">乔巴</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-人物1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-人物1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">人物1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-人物2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-人物2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">人物2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-1740-人物3.jpg" data-size="1350x1490">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-1740-人物3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">人物3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3458-4608-人物4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3458-4608-人物4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">人物4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-公主.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-公主.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">公主</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2304-1728-呃呃呃.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-呃呃呃.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">呃呃呃</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2304-1728-小圆子.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2304-1728-小圆子.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小圆子</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/720-960-我的球鞋.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/720-960-我的球鞋.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">我的球鞋</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2448-3264-树.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2448-3264-树.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">树</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-生日快乐.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-生日快乐.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">生日快乐</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-路飞3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-路飞3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">路飞3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1728-2304-路飞4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1728-2304-路飞4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">路飞4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2448-3264-路飞5.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2448-3264-路飞5.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">路飞5</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-金木研4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-金木研4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-金木研5.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-金木研5.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研5</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-金木研6.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-金木研6.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">金木研6</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2592-4608-随笔.jpg" data-size="2590x4600">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2592-4608-随笔.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3458-4609-随笔2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3458-4609-随笔2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-随笔3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-随笔3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/3456-4608-随笔4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/3456-4608-随笔4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/4608-3456-随笔5.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/4608-3456-随笔5.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔5</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1280-720-随笔6.jpg" data-size="1280x720">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1280-720-随笔6.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">随笔6</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig3" style="display:none;"><h1 class="year">2019年<em>07月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            ////////////////////////////////////////////////////////////////
+
+            /////////////   随笔      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            /////////////   小漫      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //////////////////////////////////////////////////////\
+            var liTmpl = "";
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫1.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫1.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫1</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫2.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫2.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫2</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫3.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫3.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫3</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫4.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫4.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫4</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫5.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫5.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫5</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫6.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫6.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫6</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫7.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫7.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫7</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫8.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫8.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫8</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫9.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫9.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫9</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫10.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫10.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫10</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫11.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫11.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫11</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫12.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫12.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫12</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1585-1984-小漫13.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1585-1984-小漫13.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫13</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫14.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫14.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫14</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1586-1975-小漫15.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1586-1975-小漫15.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫15</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫16.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫16.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫16</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2160-1620-小漫17.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2160-1620-小漫17.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫17</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1784-1585-小漫18.jpg" data-size="1780x1580">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1784-1585-小漫18.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫18</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫19.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫19.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫19</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫20.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫20.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫20</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/2028-1602-小漫21.jpg" data-size="2020x1600">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/2028-1602-小漫21.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫21</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1506-2160-小漫22.jpg" data-size="2590x4600">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1506-2160-小漫22.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫22</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1911-1559-小漫27.jpg" data-size="1780x1580">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1911-1559-小漫27.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫27</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫28.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫28.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫28</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫29.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫29.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫29</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1620-2160-小漫30.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1620-2160-小漫30.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫30</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1080-1440-小漫31.jpg" data-size="1720x2300">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1080-1440-小漫31.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫31</figcaption>\
+            </figure>';
+            liTmpl += '<figure class="thumb">\
+                <a href="http://q4ecplq6d.bkt.clouddn.com/1952-1417-小漫32.jpg" data-size="4608x3252">\
+                  <img class="reward-img" src="http://q4cz9u1cx.bkt.clouddn.com/1952-1417-小漫32.jpg" onload="lzld(this)">\
+                </a>\
+                <figcaption style="display:none">小漫32</figcaption>\
+            </figure>';
+            ulTmpl = ulTmpl + '<section class="archives album bigbig4" style="display:none;"><h1 class="year">2019年<em>07月</em></h1>\
+        <ul class="img-box-ul">' + liTmpl + '</ul>\
+        </section>';
+            /////////////   小漫      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
             createVideoIncon();
             _view2.default.init();
+        };
+
+        var replacer = function replacer(str) {
+            var arr = str.split("/");
+            return "/assets/ins/" + arr[arr.length - 1];
         };
 
         var ctrler = function ctrler(data) {
@@ -207,7 +1048,7 @@
         function loadData(success) {
             if (!searchData) {
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', './data.json?t=' + +new Date(), true);
+                xhr.open('GET', './ins.json?t=' + +new Date(), true);
 
                 xhr.onload = function() {
                     if (this.status >= 200 && this.status < 300) {
