@@ -49,10 +49,14 @@
 .instagram .thumb a {
     position: relative;
 }
+.instagram .album {
+    margin-bottom: 50px;
+}
 .instagram .album h1 em {
     font-style: normal;
     font-size: 14px;
     margin-left: 10px;
+    /*margin-bottom: 50px;*/
 }
 .instagram .album ul {
     display: flex;
