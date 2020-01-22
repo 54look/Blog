@@ -14,15 +14,15 @@
     氢气云
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
+  <meta name="description" content="基于内容的新闻推荐系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="“javaSE实训笔记”">
 <meta property="og:url" content="http://look_blog.gitee.io/blog/archives/c56e6275.html">
 <meta property="og:site_name" content="氢气云">
-<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:description" content="基于内容的新闻推荐系统">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-15T05:18:41.000Z">
-<meta property="article:modified_time" content="2020-01-17T16:28:36.122Z">
+<meta property="article:modified_time" content="2020-01-22T01:04:52.578Z">
 <meta property="article:author" content="H2 Cloud">
 <meta name="twitter:card" content="summary">
   
@@ -139,7 +139,7 @@
     <!-- 左侧导航栏结束 -->
     <nav>
       总文章数
-      4
+      7
     </nav>
     <nav class="header-smart-menu">
       
@@ -261,7 +261,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数: </span>
-        <span class="post-count">6字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -270,7 +270,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 
@@ -293,7 +293,7 @@
     <div id="toc-article" class="toc-article" style="display: none;">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#实验步骤："><span class="toc-number">1.</span> <span class="toc-text">实验步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现过程"><span class="toc-number">2.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1：准备结巴分词工具，测试分词效果"><span class="toc-number">2.0.1.</span> <span class="toc-text">1：准备结巴分词工具，测试分词效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2：生成新的-idf字典文件-idf-dict-txt"><span class="toc-number">2.0.2.</span> <span class="toc-text">2：生成新的 idf字典文件 idf_dict.txt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-and-4：计算文章相似度-并-生成推荐列表（采用Jaccard计算）"><span class="toc-number">2.0.3.</span> <span class="toc-text">3  and  4：计算文章相似度 并  生成推荐列表（采用Jaccard计算）</span></a></li></ol></li></ol></li></ol>
     </div>
     <script type="text/javascript">
     function showToc() {
@@ -316,15 +316,51 @@
     </script>
     <div class="article-entry" itemprop="articleBody">
       
-      <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="7927da18f961455dff97862b249a67c16c9500bccd4cd882304dca68beaedd20">607631d029afc886d73f9aa463eacd3d7170d4371e3a7d95b258d972066afe198ab7972f8559949b423ce6dc92dc108d3eedf90835df237e33ca69331570bbaf1476a3e42274322ebe4cab7ad5eab01ca97c170e780b6c3ca2b3578d42e5d05dcaecc86d8dc3f5dc369a341f1cc4f60fdfb4c01ee1e2de06e1375aa5cb9ed6f9c1d0f0e31e14127d5911d7c69abc43299ac5cdcebb9b0ca5339441e27f43863b25b52752915f5690d27b2317d015b08a08fd3b7d30770771f6a315f0777e18d1ec1f6891acae63f57a33b4f2c4ffb145c45981a7ff70cd93e4720ad73c1c32306c35aa8c9d8fd7129aa3a2befa5920c9476f732fff59eeb831cb707e6fb9c494180b8da615ebbdd9e413a6199fa3aca1ffde3499e98a1f8cae83c8ff7db974929dd1c4c23baeeefad064fe211873f62cffb3b181d79c7cb586821746c562c93580d5017de00753c704adf911d17c7ecedaf77d4690307aa60f7da9e7786f5f774eafebb8c6f6424c132342a229e756ba07101d6c074ee5eaad7b683f84ab287ac0835f1875725da42ef6eb72376b6b4cd133a2786467ec3a7b272f0e126ff65446e7b44a3d2f5cac08c7b687019620267181ef68bf263580073d85f0f40d1be26eda2d179a8e7059dd59d072fdb3a0b66eb7749712d6312c213bc9eabb5ddd8704512c51e3ce49b17f21e41587e3a676c070c8db9093adb667d380340cb6d4aca93e3bc7557365a28cc013af26ff80d6359b8f627f786018805416986f08dbb65d1cf89517f6cad530b5c68572082a2cbadcdbedd084d7e018c11c108e0bb7fd2b264c2cd60842db5766ad1d72e8983b5eb609bd48557a872e22463b46a6e5480e46a5e5561a7846a8dfdecdc6082dbdc91559a961c6e51131ea5966b0873ae1c233f90a934f1559cb2f8d058625d499b6341157250decf583721e3dc494ee18ada7155e06385bd6bbd4bf179c1295baa629a13adc1c2bb5ddf6582483a43058bb513200159fc5b1e86a74710337ce6f551edbb5659b880da4a73a0479e6aac17695027ba4d28cdd65709951ad17ae3504b50a13672843bc09a0e8574932d6c2012522af284e35d729258f09bb0d723329eb4269040ff93c5b15560208b60c32f68535a506a522733a5644f599358f0b618bd6fdda75b013bfac479511e92feaef1ba7aace5017a0c9f8c6d5be84835d8ceb8b3bc29d2ea0d6489fed18542a4cb016ef46e8d4031cfa141a5bb26905aa8a9d7233d5a4b93ebf6a64dbdd1f0380a6494eebbd550e168cce0d3720d1d8767a1b74c247601ac83a31f3e841676a96db548af4e7e979a4ebb4b6afdc0a4dda750d29a2ad91de6000b731f81d6fdc94110e23c22029984c8e5c403fc476d94670bb6fbb79c6872715d0b1ff59b117d66fd88e38ed6df32a779201d1ebb30cbd1f43aa35d45c67fec65f4988a9bb96c26e7f9562ab4c0bca66ba0de2bba0ca46ac24848d99806a14d4ab73be1e84bf62f1b98795a9b37f74ec28d07fc7153c712878991f33630b446cbcea2f4a232ee7c5d8341335f9e9d52943b0d13562258d6cf4ee39e88c9f32cc4b2237eccc6c14b65ea4cd0aa377fdf462481a8b259334c00dbb3bf03532d21df9b9ffaf9a7f27c45085c08609f1887c9eb9f89d84f4a76087f4f02e4beda756c70a1dd50e743c1fb92363e4d4aa170a88803b035cfe65a0ea9216a9bb115025cb2420c106a2115a55562e32c0f75e5dc2d0ed2499cad4cd880f272c4c781b9170ccaba6d6132a4797f65018c7c130c603de809f3581925dfdb5e77a9ece0b4bd2bca73464ff403c990aa3a7c817b0654cfb53276607d55fadb5dee1f5ace431661eb051774fc655fd02555ee41c5eb1e6848d3e58669aa400cd62c3525ac94bb4a00d5362a1f4a0bdb1ec47d6daaecf111db209f4eb978202d2ba13f20eb1237806cd70e295c64f9b4df1f3de99d325aa726de2003d8b98e53908d1e2315fcd9db38129c8bd3416d4e95000be5686909fedc3b63fde3464d5b0c8c134f59f7fb3bd057f2d50a48e5cf6c87d5893c606aedb40e3f100ec59bba513783946f62305973426d2cc98dcf15c9f7b852df7eca568f7fca8dae75529f98a57ca6a7413220501be67bf5024e6cf4aafa27178272f50bdc3317f7674d3eb1d5e1bf63954f7ec1c88b8dd9ae1e862bca2ebefa8f894a3b60f224ce385666a69fa5c6a3c1b701dd26b82ae9e03d527a42cf93e3a5866de900d8c0fec12d91f17572ea4d57d2eb3e3efd1807018cfffef4a6aaf3117274e83f12084340687f18073327a29f7179d53b63bd5e07d5f74e282c3cd879022535793b5b14dbadc6a5bbf7f40202e1dacc1efb0b238597eef3323bbebbef7d1decb12caa26b334481444e23772d9690d16ee859059ba5419b71bca85c6fe1b6d02dce326f3f68d15d1b5aa9bca5fe2c68c42752a10fd5176a14d134aeb7639c8f253d8d7f46984f0e93feb0574c8fbcd345d1f1e55ff9a64575e7f73ddd62ca0cfbde9b5464fca726f80e1f2658a0c8b2ad916f7d8f8b68517e5aa643ea8ce60ea8c6243dfe397ca9061f0cd86b9e8dd83e65e1f9149ef97ac21b47e0c9d1e3def134d8da31bd7474c7fbb7a093becc1dd6f0096c5088a3a2d9db28c9d91f0a549e928d5cef2687f0831ffd5bc2dd862194ce002aa41591c09dca910b78f153f19c28c01e4705097495f07681e60a29d4cfaece348371899226fbdd5bcd1fec1bcb1c6b88ff256fc152d223f6870a043450c535bf6d49334812e382f394bb459d243a0c3871ac3c53e166cc7a0e6842d2982722f2696bad0c18b91cb34d0ae359ff434fe26b0a06a2c9f09ed3db14df57cec7f30a11de5cbf9be765051de9af0f3e762432c9e225cb93932917a74274ef1b9b8c13622df2a602dd2a0a93a1b56f340a66d2e42fb8ca2a358be82be1dd3cf638dbcd58985d06a1324dc0b8ce0f7699b5de879503170434fbbf45e2db7676e90fc12d7c906d620be7b39fce81fe7b29a4c4bdc282ab66a4c6c1736ef0b4d424734a4617db50b35e403b17c1b2bd34b97560dc731ab6d534644921f8a0fa631e742909ad1e7541d897e9719c3ddfde7f3300f2ce1dcc00446a94676fbccf01031620469189a84f293c140067464dd5224194905635b260c2f1ec1c494eeec693d64c1396412aeed0dbaffc4475e482717b378f65063648a0515b197910a8193b9ff414aed594344ece9c6e1de77ed4f46c5a57c780dfaa203806c7ce2834a9a786f26902319a235e244e3e43d7406f76b3025e2d3c7e27bab939300e4357ff9168e171b43d6b348eb5e2b8d52f0365d06d353fd5ac9790912fc40e359171848d1aab205164c3f83c36acd252e76fe7ad017cc95213e7ea198d0d0d93f2282fc29223c31360f59c2c5438332736893a763f7d75c37221bf5ea32d90377bc4ccaa6848138bb80b9684a4103fa7b9413eac2fd1dfdfec9f0b23b636ed790a4a19eb0b352edf91c63843fe0eec0eda47dd5bbbc2c1b4dc4e122c8d80be13a054c844606beed8d00f3a368fde0162063625eb735bcad34c1cdde57dff480f2f0b1c5d454e476de4b7f8e0c61f539e23932f424365653a98063e7259c1e9bace2dd003e649bffd812434b738a06b1ba8033030ee894f35b9f5e891cd9d87991a4813ae28be84742a9aa41a41e2ea5aa850541677f18e94f331f234e2b7baed666aa9b9292f0408942d0edb1c93f432e052ecb83dffe5b8fa0e66f771ba30d085ad371d2e0e24dc33c6a8ec01eada9121435a7162753e82ee3b0a587cbd671d460e42ddc3c7985d43882a44d95351da92aeed2900beade9f07556d1a698f4e1ad168369d9e48c660756c8d3bf367366e70bb9a2e943dee7b77d385f03f2f9f0c36a4d27488e02aca159565a5dca9d8f0108a80218007c4576e5b6922db6926f87d61019998e77fa9cfd59a5760f539a5528ac2b5d8ce33881653452b927d6c3fb7f4f934e5fcd6c65aa2ce2d51f725770d0acda2def2639d56e13644b62fd1e77e72e8a69a7bc411baa6ed0da9c1a209d2fbba594defa4c8b98bc7fed9f87db7034c6254e433dfd68ee1ce107564bbeef61706448c7cd157152c06753c442b8905fe51ffb9c222602034f902911d328aa427fafd0a086f44f2b77ea6945536910bcefbf33ca79c20ab51c144309d9d0d602188dbf129250de3d07cc082f49d387e0bf8ea7fc94964f7cc7648d1f6755fbf58d84c1b8b598e9fcde133ece2eb8e24dbfa354f58fed64673de5622d42ffc19f622c2214d2aaae42372e77c09c2eac4254b908c7824643a1793886f6c2d8821a3640c499adfb16f3dd5c93a0186fac75e6674a5275bee6dcd0c1998a76837dbc9b2de5be5b91d4e69b6091cddc580f6de86b09be6acf3fba7724955a198cb4375ab2b0c15ccc89054bf53d102d02e0893ce715166ba844875f96a5d3974c8711d4847b09e8d344296b3ac651f6ff6bd1abd3a57460ddf74a21a27210e0e7fd5b8bc469660e72d6d8204bff85309fe49a65b298be2ccc8b0e1e3f1d5b3bb7a56880083ec37103d5c7e250d6badd5ac2039e667eb53d14cff6fff91dc02c72d38700d929e217b6d597fe468eb22247117d6e2bc92cae21d40ff8802512d5a484ec9be09c853610a14c4e5afaf2e99d22244fb18c3c964cde291d5ab7cb0861f06b03cd06bade4d0bfc81c87f321e03e4916948ba71859e9958b2b9a8a64880819a03445089915c3fb502ac63a4d1000e852d0e3f2ed92d6d1c83341a5037472903bbf4a6ee1a8d50c0eb1eebd0307e53b4762ce3c53ee323c655004cdd3a882971f91363f29a6e31c9e4b28d0aad363b141b0d5ac76226579925809f3f43b1297d91f4b10dedf4fb98be64e835cc1371dbebd1d301abd47249152256a2a00622582975393e6246c20921677b62f1660188bbe5093636be086ef70df76fee131ac4a65f87f960d6b760c0099ff62ce924472bef9654a35eca1a6b3c63eddc129c05aec84898942a0908f351dbf0688719fc757a97094ef2a394cee532d5bf7c299857fce03eac7b70b78f4300f17e3670c774acd1ccc52b227a9b75a6b8364b0259e4e003c667e3e3c32b609a290b713cbb0aab026e0d22fe8707d07931b645c9c8f26c773dc3debd60fe3e65f6e1e24375a1f048760e4be607c679b1579b68438712007173653b9fc3504e83a3f48cd968263bdc87003d33755881b88e58466419c89e146a56fc2354e1ea359c81f5299106b446cb98328e9e523b33476a2e96d94fc6b14fdaf8d2ecc4f33bd84b86b9ebbd51a82d095d10043ea64c95007a0ff4c7acbf8f5121d9e4422d58cf68547cfc4ce71dfd70e43f361c704ed33d98055a35059298cfeca462ff5c8b981e0c6e83b5c703591b9533564c18a3a58bda600c7162c0ea7c840c6d5ef0772fb15ffce463a5aed80beecc7246ccacbe789196723d5d03327b99cb591ef4d7eb2256e7de3f6c2e57ad9cf3bd7b53f42182fbccc2aadf1e84100f93b1b9714ab87df7037846ed79eb78cec72333c17813c9af3e19f57092beac12bda185f2bddd5d689f57583f7b0ecaa3f0d7309425416dff67e0b3032b25a38a9b5eb9c24136dd0eab50a38b7b350aa1fb00e2326aa833afb2fb9eb7717ada14b5dff492a8aaa0276a50d87ccf917c84b0bad832f0ab7008710673e2023e4fede9caf683e4622a8f05b4d85334f4044f17b9c37ad7088a11c55124900ffc88125af84ed832e2eb65798dfb5e65166c94ec488413b184ad4dee5c71d4a568cd5bf137fd7843fad9606e2b0b2d26a6d0110ae38c6738a9e125a24069eee200883190ec413dd9e023e2dffec9f4f3d0ea9bdb63edc06e3fa7569c60f5c0b970f7839c8801aae55dd8e1c650a2cb59f0c007f8b32dad2bccb1cacf408d58d8c03e5b3c131e805edc546e0ec653a9f706d021184f1dcc7e38ff7449e36da929b6bc65c43170b2112fe394ba75931e762b8684efaf8058cd49aabe4538f33ffcd4519c8964731e6bb786f409683799870cfe82b7cfd3f671c5b1af86efa0193ab309b7b82879f245de19db9df28aced00c77ee16aa7dc514d47279877057ed2058b1a9dc71aa4475895915a74b99c900867fb68cf912de9ccc2a53793a704d431d63e508cba4ce10738b52650ba440b6b65a44e223985846238e02e6b26d31f5fdfe88eb69a2e58044fcd1f44a506b1ff6d17a3ac7e1464b8f8f717cb75d352d383356c12750eda5943252aa63c6e6bad056e76c9fa7f13f0bff5a3420ec19c7291049f1f617ca7c96d297d0732c80154ed1010854341f2623e5e510dfcc79a9df088458b70bf04f02b2c981af13be446ce7bb8408595fe16bf245bf21ac01879f0c81c8afda1d9e488130e4fe0a45559885827b18c358d207bfb6e4a7c97380ffb7229cde5d9d37f34b9ca90fb0da88fb72a4d2edfec409f679f421839d66202dc4551c852d984ceaa5859dec61bbac8059aef902b1e6611ace5b8cf29b6371c609add3fd3b6cf21dd0e5f907a1b53b8528b8f3999ef00124546b43e32bcc6b6c9471b06ab3113873a4bc58225a9232e5b035c6bffc86b2d7caef9413146f2e049815028dcf0fe679b169f801b71d6eeb0ddf6284852d61f66629221ffaecc5b4bfc643716eab188ce13e3e6d68cb4a1440841ebb447ed6243dd8515dad1c8467a052cabe5a9c56ae3e4e4cffd0787159635bcc4c89490e3badb1d18853de52694ae6c522e9e13ae4b01197fbf1c0ccf3355e4ce898b053399cd7a7c2df1462c215c542e371fea9ebdab1863c589167b7669867edb69b7f701e94e233c2cc52653d36bf9cbf53a4bf61765df581e676d3888fa1c20684f603be4c47c7e53f2b94758e558b5c992b6e471f4ad060437076d4ef721f7e86104c6bdd3520a8676e5260697ae93b52b48b80ebe4657da9d5b5088bad2e6f08b279e2390fe70f7f972d1935724ea450aa0820810a128aef2a73123b6dbfcdd53f04388cd0825b772b0f8cc07f175ee7cb3d7c4f7112e27480e4f9118c8c17cd7c1fa25ab1dd5c61e9e1f996b963928a81c264c07adfd41210a7c1409fb7f60dc66da145b1130c9450be1f5b7af4a91d274295acf95b49638f6defb639c68cad4006a6c0e8f08f79fc9574370dedcea3c77d8dddd6c5e9513b83f0965db136584518eaff7287e4fd1dbbdcbf04a6f7e7e267749242faee246e9c8700bf85d0b92d31a918298a51a15526924f02bc4431299d52d9f06b8d0bea356af4f964f4cedc52837dab4e5279b51c62f852ab50730ef9aedffdff17a24e04ddab68e69e0507bd65b4f389e17b425d174184da7f18abafe46da80edcc6dd96e6436da23a7a68055406a0198862a5190512b829854c9145b23ebe00ed10317a225dc1fe89de7deb4a24f21a77a6f9b5d7f9f5304f2a54636cb34a3c0e8c8deb2c4cac56713d5553e8c93698898db8dfdf958499f4b39db3e674bd1a081a3f5ba4e78dcd438987f80468ba234fa0b7bcf940e3b4a2080ffbc424b068daac00aa5d55c5631e0a8380cb6c130af50335c4285190171313be7fcfa1b648ec42a7a749128403abf9a5937783bcc21815cebf9004b49a1a321e96fc7eda20d3b380b50f46c701539ab561376802977fb930c32c711ff68f1a4eb65114533863622b48a076d984956c49f8cf1ca9a96cc4798cf45fbd6a9f9843fe96d309839dc731ff464ca6fc0eb28c6a446ff7461ea380fd70f8823746cb5a14e98be502368fafe3712b193f8cd6ed05c7626e3e067a593b21505d3b3aec98f3e2692b18602150e5ea62c4e0fbf642064f857974ff35e344e8e3f74ad44f1e6271e5db5618a819259c159fc1bd73283150af3e7fd64d611b4979a4ccb60ea1f967187bcd88440d584971f5018ffb5a52e62da217bf0d05901e26a5ee4464ffd7f1ac633add8e2a9c1d308032c0ac4b0a8481a8afefd56b6225a430cf853ef061a0314fb25ba890525390ba235a91573279a7312b1b97d01940fd2d83492587df8929f6d0fe840cfc92900ee1af1dcd957f2284839caf0c6856604fab0cedebf8f4a0256ba4153e3645868727a8ebbf2923eb6ec6b5dc8afcd85ec60959e8fc664df3e2f1441a5a4331cfa2255b7a17e72588cfb6950bb9f55ba162c1bc1623bdbfdd6905ae36beeab1576ba59f3be1c07fbd80379d0252e556f795b612f2cf40b73367039e6a80841887766ab0e4fad3a622431265fcfd9c0e834f4b9f064e12bedb488644f88df3df6ee683b9fddb534d4405f4220b613d7686e53708e80937282b418f23903ad98163e676a852abdc331a627125918879c54d54268ea3f6b49bb47cd253caf0c007f7174f250546fe84dbf220d1dbc816681ac4656c0c30985c9a9c7e988076f3081f53c17af3706c612d3e6490f04b5077d9d16a17366c910f2b38bf1196bd31e9b0f4b174008ad7ed98fd5ab020921f5bd80769b811295327e11c0535a81464d8fe89d205eef274da9d55a9a2c24cb21ce62a910410ac1e2beeeadfb32cdf1e8dfe1cbae09f6cabddf8dda38642a77075c4abda5cfd5be4655d109414b8bcc61551aeeef2bd4688697b32e3d4bb6ca72c500f941a0b29760a1cf3ce8fa3b077a48f7dd2dbde12ec52054e7bb592da679e24fa1b1c0c4171e17ad394698cfa3295dbd8c94d1d35671c52af30fdbd868beb14c05f1d5a71588eafedec9a8f81abb95bb4fe94118c60ec9e4923b44eec9a0cf033275c5380f1e8974431d92bf2251fdd2523c5a465682c198f1468ca2c311061</script>
-</div>
-<script src="/blog/lib/blog-encrypt.js"></script><link href="/blog/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      <p>基于内容的新闻推荐系统</p>
+<a id="more"></a>
+<hr>
+<h2 id="实验步骤："><a href="#实验步骤：" class="headerlink" title="实验步骤："></a>实验步骤：</h2><p>　　1： 准备结巴分词工具，测试分词效果。</p>
+<p>　　2：提取文章的关键词：用结巴分词工具对文章分词，去除停用词，构建词向量空间，用 TF-IDF 计算关键词权重。生成新的 idf字典文件</p>
+<p>　　3：计算文章的相似度：采用 Jaccard 相似度系数或余弦相似度计算文章两两相似度。</p>
+<p>　　4：选择当前文章最相似的前 10 篇文章推荐给用户。</p>
+<hr>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><hr>
+<h4 id="1：准备结巴分词工具，测试分词效果"><a href="#1：准备结巴分词工具，测试分词效果" class="headerlink" title="1：准备结巴分词工具，测试分词效果"></a>1：准备结巴分词工具，测试分词效果</h4><p>　　1.1：下载结巴分词的源代码  <a href="https://github.com/huaban/jieba-analysis" target="_blank" rel="noopener">https://github.com/huaban/jieba-analysis</a></p>
+<p>　　1.2：将解压后的 jieba-analysis-master\src\main\java 目录下的 com 文件夹复制到 NewsRecommenderSystemConsole 项目中的 src 目录下。直接使用结巴分词工具的源代码。</p>
+<p>　　1.3：将解压后的 jieba-analysis-master\src\main\resources 目录下的所有文件复制到 NewsRecommenderSystemConsole 项目中的 src 目录下。</p>
+<hr>
+<h4 id="2：生成新的-idf字典文件-idf-dict-txt"><a href="#2：生成新的-idf字典文件-idf-dict-txt" class="headerlink" title="2：生成新的 idf字典文件 idf_dict.txt"></a>2：生成新的 idf字典文件 idf_dict.txt</h4><p>　　2.1：读取文件中每个新闻的content字段，加入List<String> list = new ArrayList<String>();集合中</p>
+<p>　　2.2：计算 idf(word)</p>
+<p>　　　　调用set_idf(list )；调用结巴分词的 TFIDFAnalyzer 类，计算出每一篇新闻标题的关键词</p>
+<p>　　　　将所有关键词添加到 Map&lt;String, Integer&gt; freMap = new HashMap&lt;String, Integer&gt;()；（泛型的含义&lt;关键词，关键词出现的次数&gt;）中</p>
+<p>　　　　生成新的 idf 字典</p>
+<p>　　　　// 1. 通过Map.keySet遍历key和value：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String key : freMap.keySet()) &#123;</span><br><span class="line">   bw.write(key + <span class="string">" "</span> + Math.log(list_size/(idfMap.get(key)+<span class="number">1</span>)) + <span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　2.3：计算 tf-idf(word)</p>
+<p>　　　　2.3.1：List<Article> article = dao.getAllList();获取所有的新闻</p>
+<p>　　　　2.3.2：调用结巴分词的 TFIDFAnalyzer 类和上一步算出来的 idf _dict.txt字典, 算出每一篇新闻内容的关键词的 tf-idf(word)</p>
+<p>　　　　　　录入数据库：（以下为数据库表名）</p>
+<p>　　　　　　2.3.2.1：article_keyWord（id article_id key1 key2 key3 key4 key5） ：该表存放每个文章 id 所对应的 5 个关键词（此表边执行边录入数据）</p>
+<p>　　　　　　2.3.2.2：keyWord_TuArticle（id keyWord article_id_str）：该表存放含有某个关键词的文章 id 集合（用Map&lt;String, String&gt; Map = new HashMap&lt;String, String&gt;();先记录，再执行录入）</p>
+<p>　　　　　　2.3.2.3：完成 keyWord_TuArticle 的数据录入</p>
+<hr>
+<h4 id="3-and-4：计算文章相似度-并-生成推荐列表（采用Jaccard计算）"><a href="#3-and-4：计算文章相似度-并-生成推荐列表（采用Jaccard计算）" class="headerlink" title="3  and  4：计算文章相似度 并  生成推荐列表（采用Jaccard计算）"></a>3  and  4：计算文章相似度 并  生成推荐列表（采用Jaccard计算）</h4><p>　　1：点击文章后，提取该文章的关键词，用这些关键词去keyWord_TuArticle表中查找含有这些关键词的文章id。形成文章候选集</p>
+<p>　　2： 把候选集的文章 用 Jaccard 计算与目标文章之间的相似度 然后按相似度从高到低来排序 </p>
+<p>　　3：空值与去重判断</p>
+<p>　　　　如果候选集的个数n == null，推荐的文章显示10条</p>
+<p>　　　　3.1：去重，去原来的新闻</p>
+<p>　　　　3.2：n ！= null &amp;&amp; n &lt;= 5条 全部显示 n 条 +（10-n）条随机新闻</p>
+<p>　　　　3.3：n &gt; 10条 只显示 n 中的 10 条</p>
+<p>注意事项</p>
+<p>char类型： 对英文字符占用1个字节，对一个汉字占用2个字节，不论存储的数据是否达到了10个字节，都要占去10个字节的空间。因为是固定长度，所以速度效率高。</p>
+<p>varchar类型：varchar 的类型不以空格填满，比如varchar(100)，但它的值只是”qian”,则它的值就是”qian”</p>
+<p>由于char是以固定长度的，所以它的速度会比varchar快得多!但程序处理起来要麻烦一点，要用trim之类的函数把两边的空格去掉!</p>
+<p>varchar 存储变长数据，但存储效率没有CHAR高。如果一个字段可能的值是不固定长度的，我们只知道它不可能超过10个字符，把它定义为 varchar (10)是最合算的。varchar 类型的实际长度是它的值的实际长度+1。这一个字节用于保存实际使用了多大的长度。</p>
+<p>nchar类型和nvarchar类型是怎么一回事呢？为了与其他多种字符的转换，如中文，音标等，对每个英文(ASCII)字符都占用2个字节，对一个汉字也占用两个字节，所有的字符都占用2个字节。</p>
+<p>技巧</p>
+<p>查找两个数组中相同的数字，用set集合</p>
+<p><a href="https://bestzuo.cn" target="_blank" rel="noopener" class="LinkCard">Sanarous的个人博客</a></p>
+
       
       
     </div>
@@ -414,11 +450,11 @@
 
 <nav id="article-nav">
   
-    <a href="/blog/archives/3c3229f5.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/archives/48314b32.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          “What is the meaning of life”
+          副本
         
       </div>
     </a>
@@ -452,7 +488,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#实验步骤："><span class="toc-number">1.</span> <span class="toc-text">实验步骤：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现过程"><span class="toc-number">2.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1：准备结巴分词工具，测试分词效果"><span class="toc-number">2.0.1.</span> <span class="toc-text">1：准备结巴分词工具，测试分词效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2：生成新的-idf字典文件-idf-dict-txt"><span class="toc-number">2.0.2.</span> <span class="toc-text">2：生成新的 idf字典文件 idf_dict.txt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-and-4：计算文章相似度-并-生成推荐列表（采用Jaccard计算）"><span class="toc-number">2.0.3.</span> <span class="toc-text">3  and  4：计算文章相似度 并  生成推荐列表（采用Jaccard计算）</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
