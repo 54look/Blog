@@ -1425,6 +1425,9 @@ pre .id {
   margin-right: 10px;
   margin-top: 6px
 }
+.article-category {
+  display: none;
+}
 .article-pop-out {
   float: left
 }
